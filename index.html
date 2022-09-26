@@ -1,0 +1,73 @@
+<!-- In VSCode, inside an open HTML document, type ! then hit Enter for a quick webpages-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Document</title>
+        <link href="./style.css" rel="stylesheet"/>
+        <!-- rel is relationship betweeen attribute and document you're working on-->
+        <style>
+            body {
+                font-size: 12px;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- LIST and LIST ITEMS-->
+        <!-- ORDERED LISTS-->
+        <ol>
+            <li>first item</li>
+            <li>second item</li>
+            <li>third item</li>
+
+        </ol>
+        <!-- UNORDERED LISTS-->
+        <ul>
+            <li>first item</li>
+            <li>second item</li>
+            <li>third item</li>
+        </ul>
+
+        <!-- Nesting Lists-->
+
+        <ul>
+            <li>This is a list item</li>
+            <ul>
+                <li>This is a nested item</li>
+                <li>This is another nested item</li>
+            </ul>
+            <li>This is another list item</li>
+        </ul>
+
+        <!-- ANCHOR TAGS
+        Used for creating hyperlinks
+        -->
+        <a href="./new.html">This is a link to a new page</a>
+        <a href="https://www.google.co.uk/">Google Link</a>
+
+        <!-- IMAGES
+        We use an image tag and a source for the image
+        -->
+        <img src="https://qa-community.co.uk/static/qa_fill_primary.svg" />
+        <img src="" alt ="QA Logo" />
+        
+        <!--IN-LINE style attribute -->
+        <img src="https://qa-community.co.uk/static/qa_fill_primary.svg" alt="QA Logo" style="width:100px; height:100px;"/>
+
+        <!-- FORMS
+                can have a METHOD and an ACTION
+                METHOD -> how we send some information
+                ACTION -> where to send the information
+        -->
+
+        <!-- GET method sends form input to URL bar
+                with a name : value pair
+                they are used like a hyperlink-->
+
+         <form method="get" action="search">
+             <h4>GET form</h4>
+             <input type="text" name="q">
+             <button type="submit">SEARCH</button>
+         </form>       
+    </body>
+</html>

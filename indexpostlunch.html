@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <!-- FORMS
+                can have a METHOD and an ACTION
+                METHOD -> how we send some information
+                ACTION -> where to send the information
+        -->
+
+        <!-- GET method sends form input to URL bar
+                with a name : value pair
+                they are used like a hyperlink-->
+
+                <form method="get" action="search">
+                    <h4>GET form</h4>
+                    <input type="text" name="q">
+                    <button type="submit">SEARCH</button>
+                </form> 
+
+                <!-- POST method sends data to an ACTION url-->
+
+                <form method="post" action="mailform.php">
+                    <h4>POST form</h4>
+                    <input name="Sender" type="text">
+                    <input name="Content" type="text">
+                    <button type="submit">SEND</button>
+
+                </form>
+
+                <!-- Forms can be created without a method or an action-->
+
+                <form>
+                    <h4>More Inputs</h4>
+                    <input type="checkbox" name="Checkbox1" value="1">1
+                    <input type="checkbox" name="Checkbox2" value="1">2
+                    <fieldset>
+                        <legend> Question 1:</legend>
+                        <input type="radio" name="Multiple choice" value="a">a
+                    <input type="radio" name="Multiple choice" value="b">b
+                    <input type="radio" name="Multiple choice" value="c">c
+                    <input type="radio" name="Multiple choice" value="d">d
+                    </fieldset>
+
+                    <input type="date" name="partyTime"/>
+
+                    <input type="color" name="picker"/>
+                    
+                    
+                </form>
+
+                <!-- -->
+</body>
+</html>
