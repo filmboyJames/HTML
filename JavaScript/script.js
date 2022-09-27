@@ -155,10 +155,10 @@ while(condition === true){
 //DO-WHILE
 //Like a while loop but it will ALWAYS run at least once
 
-let a =false;
-do{
-    console.log("Run Forrest Run");
-} while(a===true);
+//let a =false;
+//do{
+ //   console.log("Run Forrest Run");
+//} while(a===true);
 
 //SWITCH CASES
 //These run until a break or return, and can be much more effective than large if-else-if statements
@@ -228,9 +228,70 @@ while(a3<=10){
 }
 
 //5
-let day = new Date();
+let now = new Date();
+let day = now.getDay();
+console.log(day);
 
 switch(day){
-    case Monday:
+    case 0:
+        console.log("It's Sunday!");
 
 }
+
+//Conditionals
+// Truthy and Falsey
+//Data types in JS are dynamic and mutable
+//Things that are Falsey
+
+let x = false;
+x=0;
+x="";
+//Unresolved with the check below
+//undefined
+//null
+//NaN - not a number
+
+console.log(x == false);
+
+let z = NaN;
+
+if(z){
+    console.log("truthy");
+}
+
+//IF, ELSE IF and ELSE statements
+//These check a condition and run a code block if the condition is met
+
+let a = 0;
+if(a == 0){
+    console.log("Sunshine");
+} else if (a!= 2){
+    console.log("moonlight");
+} else {
+    console.log("boogie");
+}
+
+//Ternary IF
+// Shorthand version of the if/else
+//The following two versions are the same
+
+//let z = 2;
+//if (z == 2){
+ //   console.log("z is 2");
+//} else {
+  //  console.log("x is not 2");
+//}
+
+//x ==2 ? console.log("x is 2") : console.log("x is not 2");
+
+//Equality and Type
+// == doesn't compare data types
+
+"1" == 1 ? console.log(true) : console.log(false);
+
+//Strictly equals operator ===
+//Check the values and the data types
+"1" === 1 ? console.log(true) : console.log(false);
+
+//AND operator &&
+//OR operator |
