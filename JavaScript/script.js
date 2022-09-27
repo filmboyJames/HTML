@@ -218,3 +218,19 @@ for(let a2=100; a2<=200; a2++){
             console.log("*");
     }
 }
+//3
+let a3=1;
+while(a3<=10){
+    for(let i=0; i<10;i++){
+        console.log(a3);
+    }
+    a3++;
+}
+
+//5
+let day = new Date();
+
+switch(day){
+    case Monday:
+
+}
