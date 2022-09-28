@@ -22,3 +22,37 @@ let user = {
     years: 30
 };
 
+let {name, years: age, isAdmin=false} = user;
+
+// alert ( name );
+// alert ( age );
+// alert ( isAdmin );
+
+// Scope 1
+
+// function addPoop(x){
+//     let y = "plop";
+//     console.log(x," has poop now added");
+// }
+
+// addPoop("James");
+
+
+// if (y ==plop){
+//     console.log("Plop exists");
+//     let z = Turd;
+// } else {
+//     console.log("Plop doesn't exist");
+// }
+
+// console.log(z);
+
+function doSomething() {
+    let a =1;
+    console.log(a);
+    console.log(foo());
+    function foo() {
+        return 2;
+    }
+}
+doSomething();
