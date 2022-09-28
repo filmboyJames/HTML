@@ -163,5 +163,74 @@ name: "Jimes",
 }]`;
 console.log("JSON", myObj);
 
+//Example of loading JSON DATA:
 //GET request
-fetch("people.json").then(response => response.json()).then(data => console.log("fetch", data));
+// fetch("people.json")
+// .then(response => response.json())
+// .then(data => console.log("fetch", data));
+
+//Arrays
+const myArr = [1, "2", 3, 4, 5, 6, 7];
+const names = ["bob", "mickey", "eeyore", "minnie"];
+console.log(myArr);
+console.log(names);
+console.log(names[2]); //eeyore
+names.push("jerry"); //It is a constant, but you can add entries using methods, e.g. of the format "method( ... )"
+console.log(names);
+
+//Destructuring
+const [a1, a2, a3, a4, a5, a6, a7] = myArr;
+console.log(myArr[0]+myArr[1]);
+console.log(a1+a2); //Output as string, i.e. "1"+"2" = 12
+console.log(a1+parseInt(a2)); //Output as number i.e. 1+2 = 3
+//Spread operator ...
+const[name1, name2, ...rest] = names;
+console.log(name2);
+console.log("rest", rest);
+
+const grades = [21, 43, 54, 64, 23, 96, 27, 84, 100];
+const[,,,grade, ...others] = grades;
+console.log(grade);
+console.log(others);
+
+let myObj2 = {
+    name: "Peppy",
+    breed: "chihuahua"
+}
+console.log(myObj2);
+
+const n = myObj2.name;
+console.log(n);
+
+myObj2 = {...myObj2, ...{size:"xs", colour:"brown"}}; //To add an entry to an existing object, ...myObj2 copies the first, and adds new entries
+console.log("updated:",myObj2);
+
+//Functions/methods are a set of instructions you want to execute/reuse
+//Three ways to write functions
+
+//1. function - global scope, can call the function before it's been declared
+myFun("normal function", "hi");
+
+function myFun(p, x){
+    console.log(p);
+    console.log(p+x);
+}
+
+//2. function expression - has to be initialised before called
+// myFun2("Function Expression"); // THIS LINE WOULDN'T RUN FROM HERE
+const myFun2 = function(x){
+    console.log(x);
+}
+
+myFun2("Function Expression");
+
+//3. arrow functions - more concise way of writing function expressions, also has to be initialised before called
+const myFun3 = (z) => console.log(z);
+
+const myFun4 = (t,u) => {
+    let sum = t+u;
+    console.log(t,"+",u,"=",sum);
+} //Doing two statements so need curly braces, for only one action these are not needed
+
+myFun3("arrow function");
+myFun4(3,4);
