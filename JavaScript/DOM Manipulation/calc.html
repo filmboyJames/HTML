@@ -17,20 +17,31 @@
 <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 
-    <p>Calculator!</p>
+    <h3>Calculator!</h3>
+
+    <p>Enter your selected numerical values in the input boxes and select your preferred calculation operator to see the result!</p>
 
     <main>
         <section>
-            <input type="number" value ="0" id="counter" readonly>
+            <label for="input1">Input 1</h3>
+            <input type="number" value ="0" id="input1" >
             <br>
             <br>
+            
             <div id="counterButtons">
-                <button onClick=minusFive()>-5</button>
-                <button onClick=minusOne()>-1</button>
-                <button onClick=reset()>Reset</button>
-                <button onClick=plusOne()>+1</button>
-                <button onClick=plusFive()>+5</button>
+                <button onClick=plus()>+</button>
+                <button onClick=minus()>-</button>
+                <button onClick=times()>x</button>
+                <button onClick=divide()>÷</button>
+                <button onClick=modulo()>MODULO</button>
             </div>
+            <br>
+            <label for="input2">Input 2</h3>
+            <input type="number" value ="0" id="input2">
+            <br>
+            <br>
+            <label for="output">Result</h3>
+            <input type="number" value ="0" id="output" readonly>
         </section>
         <section id="output">
         </section>

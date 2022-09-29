@@ -22,40 +22,52 @@ function div(x,y){
     console.log(frac);
 }
 
-const counter = document.getElementById("counter");//Getting the input box element
+const input1 = document.getElementById("input1");
 
-const minusOne = () => {
-    counter.value = parseInt(counter.value) - 1;
+const input2 = document.getElementById("input2");
+
+const output = document.getElementById("output");
+
+const plus = () => {
+    output.value = parseInt(input1.value)+parseInt(input2.value);
+    console.log(output.value);
     history();
 
 }
 
-const plusOne = () => {
-    counter.value = parseInt(counter.value) +1;
-    history();
-}
-
-const reset = () => {
-    counter.value = "0";
-    history();
-}
-
-const minusFive = () => {
-    counter.value = parseInt(counter.value) - 5;
+const minus = () => {
+    output.value = parseInt(input1.value)-parseInt(input2.value);
+    console.log(output.value);
     history();
 
 }
 
-const plusFive = () => {
-    counter.value = parseInt(counter.value) +5;
+const times = () => {
+    output.value = parseInt(input1.value)*parseInt(input2.value);
+    console.log(output.value);
     history();
+
+}
+
+const divide = () => {
+    output.value = parseInt(input1.value)/parseInt(input2.value);
+    console.log(output.value);
+    history();
+
+}
+
+const modulo = () => {
+    output.value = parseInt(input1.value)%parseInt(input2.value);
+    console.log(output.value);
+    history();
+
 }
 
 //ADDITIONAL EXTRA - maaaybe...
 
 const history = () => {
     const hist = document.createElement("p");
-    hist.innerText = counter.value;
+    hist.innerText = output.value;
     const output = document.getElementById("output");
     output.prepend(document.body.appendChild(hist));
 }
