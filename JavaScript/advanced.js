@@ -111,24 +111,37 @@ console.log(personA.getName());
 
 //Closures Exercises 3
 
-// let counter = () =>{
-//     let start = 0
-    
-//     return {
-//     value: function() {
-//         return start;
-//     }
+let counter = (start) =>{
+    console.log("Counter starts at: ", start);
+    return (amt) => {
+        console.log("Change by: ", amt);
+        return start + amt;
+    }
+}
+    let counterA = counter(1)
+    console.log("Counter now reads: ",counterA(-2));
 
-//     inc: function(x) {
-//         start + x;
+//Callback and Promises Exercise 1
+
+const plusten = (input) => {
+    alert(`This is your number plus ten: ${parseInt(input)+10}`);
+}
+
+const userInput = (callback) => {
+    let input = prompt(`Please enter your number`);
+    callback(input);
+}
+
+userInput(plusten);
+
+// let newProm = new Promise(resolve,reject)=> {
+//     let a = 10
+//     if (a>8){
+//         resolve("Success");
+//     } else {
+//         reject("Failed");
 //     }
-//     dec: function(y) {
-//         start -y;
-//     }
-//     }
-// }
-//     let counterA = counter()
-//     console.log(counterA.value());
-//     counterA.inc(1);
-//     console.log(counterA.value());
+// })
+
+// //newProm.then(())
 
