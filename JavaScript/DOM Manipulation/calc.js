@@ -2,26 +2,6 @@
 
 console.log("Calculator");
 
-function add(x,y){
-    let sum = x+y;
-    console.log(sum);
-}
-
-function sub(x,y){
-    let diff = x-y;
-    console.log(diff);
-}
-
-function mult(x,y){
-    let prod = x*y;
-    console.log(prod);
-}
-
-function div(x,y){
-    let  frac = x/y;
-    console.log(frac);
-}
-
 const input1 = document.getElementById("input1");
 
 const input2 = document.getElementById("input2");
@@ -68,6 +48,6 @@ const modulo = () => {
 const history = () => {
     const hist = document.createElement("p");
     hist.innerText = output.value;
-    const output = document.getElementById("output");
-    output.prepend(document.body.appendChild(hist));
+    const addToBody = document.body.appendChild(hist);const output2 = document.getElementById("output");
+    output2.prepend(addToBody);
 }
