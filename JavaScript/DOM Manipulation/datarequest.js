@@ -37,7 +37,6 @@ const link = "https://reqres.in/api/users";
 fetch(link)
 .then(function(response){
    return response.json();
-   
 })
 .then(function(data){
     console.log(data.data);
@@ -50,11 +49,9 @@ fetch(link)
 function appendData(data){
     let dataList = document.getElementById("myData");
     for (let i=0; i<data.length;i++){
-        console.log(i);
         let user = document.createElement("div");
         let id = document.createElement("card");
         id.innerText = "ID "+data[i].id;
-        console.log(id.innerText);
         user.appendChild(id);
         let email = document.createElement("p");
         email.innerText = "Email: " + data[i].email;
@@ -69,8 +66,6 @@ function appendData(data){
 
     }
 }
-
-
 // axios.get(link)
 // .then(response => appendData(response.data))
 // .catch(err => console.error(err));
