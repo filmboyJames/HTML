@@ -8,8 +8,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="calcstyle.css">
 
-    
-
     <style type="text/css"> 
     .tab {margin-left:40px;}
     .tabless {margin-left:20px} 
@@ -24,22 +22,49 @@
     <p class="tab">Enter your selected numerical values in the input boxes and select your preferred calculation operator to see the result!</p>
 
     <main>
-        <section>
+        <section class="tab">
+            <div id="input1Buttons" class="tab">
+                <button onClick=numberInput(1)>1</button>
+                <button onClick=numberInput(2)>2</button>
+                <button onClick=numberInput(3)>3</button>
+                <button onClick=numberInput(4)>4</button>
+                <button onClick=numberInput(5)>5</button>
+                <button onClick=numberInput(6)>6</button>
+                <button onClick=numberInput(7)>7</button>
+                <button onClick=numberInput(8)>8</button>
+                <button onClick=numberInput(9)>9</button>
+                <button onClick=numberInput(0)>0</button>
+            </div>
+            <br>
             <label for="input1">Input 1</h3>
             <input type="number" value ="0" id="input1" >
             <br>
             <br>
+            <div id="input2Buttons" class="tab">
+                <button onClick=numberInput2(1)>1</button>
+                <button onClick=numberInput2(2)>2</button>
+                <button onClick=numberInput2(3)>3</button>
+                <button onClick=numberInput2(4)>4</button>
+                <button onClick=numberInput2(5)>5</button>
+                <button onClick=numberInput2(6)>6</button>
+                <button onClick=numberInput2(7)>7</button>
+                <button onClick=numberInput2(8)>8</button>
+                <button onClick=numberInput2(9)>9</button>
+                <button onClick=numberInput2(0)>0</button>
+            </div>
+            <br>
+            <label for="input2">Input 2</h3>
+            <input type="number" value ="0" id="input2">
+            <br>
+            <br>
             
-            <div id="counterButtons">
+            <div id="counterButtons" class="tab">
                 <button onClick=plus()>+</button>
                 <button onClick=minus()>-</button>
                 <button onClick=times()>x</button>
                 <button onClick=divide()>÷</button>
                 <button onClick=modulo()>MODULO</button>
             </div>
-            <br>
-            <label for="input2">Input 2</h3>
-            <input type="number" value ="0" id="input2">
             <br>
             <br>
             <label for="output">Result</h3>
